@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ────────────────────────────────────────────────────────────── */
+@layer base {
+  :root {
+    --font-jakarta: 'Plus Jakarta Sans', sans-serif;
+    --font-inter:   'Inter', sans-serif;
+
+    /* Design tokens */
+    --color-primary:      #0096C7;
+    --color-primary-dark: #023E8A;
+    --color-coral:        #E07A5F;
+    --color-sand:         #f2e1c4;
+    --color-text:         #1a2332;
+    --color-text-muted:   #6B7A8D;
+    --color-bg:           #FAFAF8;
+    --color-surface:      #FFFFFF;
+    --color-border:       #E8EDF2;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-inter);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-jakarta);
+    line-height: 1.15;
+    color: var(--color-text);
+  }
+
+  /* Smooth focus ring — accessibility */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Skip to main content link */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4
+           focus:z-[100] focus:px-4 focus:py-2 focus:bg-white focus:text-ocean-700
+           focus:rounded-lg focus:shadow-lg;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ─── Components ─────────────────────────────────────────────────────── */
+@layer components {
+
+  /* Layout */
+  .container-main {
+    @apply max-w-7xl mx-auto px-5 md:px-8 lg:px-10;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .section-padding-sm {
+    @apply py-10 md:py-16;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2
+           font-semibold rounded-xl
+           transition-all duration-200
+           focus-visible:outline focus-visible:outline-2
+           focus-visible:outline-ocean-500 focus-visible:outline-offset-2
+           disabled:opacity-60 disabled:cursor-not-allowed
+           select-none;
+  }
+
+  .btn-primary {
+    @apply btn
+           bg-ocean-600 hover:bg-ocean-700 active:bg-ocean-800
+           text-white
+           px-6 py-3 text-[15px]
+           shadow-button hover:shadow-lg;
+  }
+
+  .btn-primary-lg {
+    @apply btn-primary px-8 py-4 text-base;
+  }
+
+  .btn-secondary {
+    @apply btn
+           bg-white hover:bg-sand-50 active:bg-sand-100
+           text-ocean-800 border border-ocean-200
+           px-6 py-3 text-[15px];
+  }
+
+  .btn-secondary-lg {
+    @apply btn-secondary px-8 py-4 text-base;
+  }
+
+  .btn-ghost {
+    @apply btn
+           text-ocean-600 hover:text-ocean-800 hover:bg-ocean-50
+           px-4 py-2 text-sm;
+  }
+
+  .btn-whatsapp {
+    @apply btn
+           bg-[#25D366] hover:bg-[#20bd5a] active:bg-[#1aa34a]
+           text-white
+           px-6 py-3.5 text-[15px]
+           shadow-sm hover:shadow-md;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl overflow-hidden
+           shadow-card hover:shadow-card-hover
+           transition-shadow duration-300
+           border border-[var(--color-border)];
+  }
+
+  /* Section heading pattern */
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2
+           text-ocean-600 font-semibold text-sm uppercase tracking-widest;
+  }
+
+  .section-title {
+    @apply font-heading font-bold text-headline text-[var(--color-text)]
+           mt-2 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-[var(--color-text-muted)] text-lg leading-relaxed max-w-2xl;
+  }
+
+  /* Gradient overlays */
+  .overlay-dark {
+    @apply absolute inset-0 bg-gradient-to-t
+           from-black/70 via-black/20 to-transparent;
+  }
+
+  .overlay-subtle {
+    @apply absolute inset-0 bg-gradient-to-t
+           from-black/50 via-black/10 to-transparent;
+  }
+
+  /* Image aspect ratios */
+  .aspect-card       { @apply aspect-[4/3]; }
+  .aspect-hero       { @apply aspect-[16/9]; }
+  .aspect-portrait   { @apply aspect-[3/4]; }
+  .aspect-square     { @apply aspect-square; }
+  .aspect-wide       { @apply aspect-[21/9]; }
+
+  /* Text gradient */
+  .text-gradient-ocean {
+    @apply bg-gradient-to-r from-ocean-600 to-ocean-400
+           bg-clip-text text-transparent;
+  }
+
+  /* Tag/badge */
+  .tag {
+    @apply inline-flex items-center px-3 py-1
+           bg-ocean-50 text-ocean-700 text-xs font-semibold
+           rounded-full border border-ocean-100;
+  }
+
+  /* Prose for blog/guides */
+  .prose-article {
+    @apply prose prose-lg max-w-none
+           prose-headings:font-heading
+           prose-a:text-ocean-600 prose-a:no-underline hover:prose-a:underline;
+  }
+}
+
+/* ─── Utilities ──────────────────────────────────────────────────────── */
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+
+  /* Delay utilities for staggered animations */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+
+  .opacity-0-init { opacity: 0; }
+}
