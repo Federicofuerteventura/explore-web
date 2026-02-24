@@ -15,6 +15,12 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://explorefuerteventur
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/images/logo-icon.svg',
+  },
   title: {
     default: 'Explore Fuerteventura | Surf, Activities & Local Experiences',
     template: '%s | Explore Fuerteventura',

@@ -57,16 +57,16 @@ export function Header() {
           {/* ── Logo ─────────────────────────────────────────────── */}
           <Link
             href="/"
-            className="flex items-center gap-1.5 rounded-md focus-visible:ring-2 focus-visible:ring-ocean-500 focus-visible:outline-none"
+            className="flex items-center rounded-md focus-visible:ring-2 focus-visible:ring-ocean-500 focus-visible:outline-none"
             aria-label="Explore Fuerteventura — home"
           >
-            <LogoIcon className={`w-7 h-7 ${isLight ? 'text-ocean-600' : 'text-white'}`} />
-            <span className={`font-heading font-bold text-lg leading-none ${isLight ? 'text-ocean-900' : 'text-white'}`}>
-              Explore
-            </span>
-            <span className={`font-heading font-bold text-lg leading-none ${isLight ? 'text-ocean-500' : 'text-ocean-300'}`}>
-              Fuerteventura
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/logo.png"
+              alt="Explore Fuerteventura"
+              style={{ height: '60px', width: 'auto' }}
+              className={`transition-all duration-300 ${isLight ? '' : 'brightness-0 invert'}`}
+            />
           </Link>
 
           {/* ── Desktop nav ───────────────────────────────────────── */}
@@ -202,14 +202,6 @@ export function Header() {
 }
 
 /* ─── Icons ──────────────────────────────────────────────────────── */
-function LogoIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-      <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 4c1.654 0 3.224.393 4.618 1.09L8.09 19.618A9.952 9.952 0 016 16c0-5.523 4.477-10 10-10zm0 20c-1.654 0-3.224-.393-4.618-1.09l12.528-12.528A9.952 9.952 0 0126 16c0 5.523-4.477 10-10 10z"/>
-    </svg>
-  )
-}
-
 function MenuIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

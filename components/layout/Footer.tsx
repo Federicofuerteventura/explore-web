@@ -42,13 +42,14 @@ export function Footer() {
 
           {/* Brand column — spans 2 on large */}
           <div className="lg:col-span-2">
-            <Link href="/" className="inline-flex items-center gap-2 group">
-              <span className="font-heading font-bold text-xl text-white group-hover:text-ocean-200 transition-colors">
-                Explore
-              </span>
-              <span className="font-heading font-bold text-xl text-ocean-400 group-hover:text-ocean-300 transition-colors">
-                Fuerteventura
-              </span>
+            <Link href="/" className="inline-block group">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/logo.png"
+                alt="Explore Fuerteventura"
+                style={{ height: '70px', width: 'auto' }}
+                className="brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
+              />
             </Link>
             <p className="mt-4 text-ocean-200 text-sm leading-relaxed max-w-xs">
               Your local guide to surf, outdoor adventures and authentic experiences on the

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="50" fill="#1BA3DC"/>
+
+  <!-- Mountain / dune silhouette -->
+  <path d="M18 74 Q28 50 40 58 Q48 44 58 58 Q66 50 78 66 L78 80 L18 80 Z" fill="white"/>
+
+  <!-- Palm trunk (curves left to right, bottom to top) -->
+  <path d="M24 82 C26 70 29 60 33 52 C31 50 30 47 32 45" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Palm fronds -->
+  <path d="M32 45 C40 36 50 38 54 44" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M32 45 C36 34 44 30 48 32" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M32 45 C28 34 22 33 20 36" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M32 45 C25 40 20 44 19 48" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M32 45 C38 42 44 46 46 52" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Waves -->
+  <path d="M14 84 Q24 79 34 84 Q44 89 54 84 Q64 79 74 84 Q82 87 88 84" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M10 92 Q20 87 30 92 Q40 97 50 92 Q60 87 70 92 Q78 95 86 92" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Sun circle -->
+  <circle cx="64" cy="54" r="8" fill="none" stroke="white" stroke-width="3" opacity="0.9"/>
+
+  <!-- Birds -->
+  <path d="M65 32 Q68 28 72 32" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M74 26 Q77 22 81 26" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>

@@ -32,15 +32,15 @@ export function ExperiencesSection() {
             >
               {/* Image / gradient hero */}
               <div className="relative aspect-[16/9] overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${exp.gradient} opacity-80 z-10`} />
                 <Image
                   src={exp.image}
                   alt={exp.imageAlt}
                   fill
                   priority={i === 0}
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105 mix-blend-overlay"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
+                <div className={`absolute inset-0 bg-gradient-to-br ${exp.gradient} opacity-40 z-10`} />
                 {/* Badge */}
                 <span className={`absolute top-4 left-4 z-20 text-xs font-bold px-3 py-1 rounded-full ${exp.badgeColor}`}>
                   {exp.tag}
