@@ -128,7 +128,7 @@ export function Hero() {
 
           {/* Trust badges */}
           <ul
-            className="flex flex-wrap gap-x-5 gap-y-2.5 mt-10 animate-fade-up delay-400"
+            className="hidden md:flex flex-wrap gap-x-5 gap-y-2.5 mt-10 animate-fade-up delay-400"
             aria-label="Key facts"
           >
             {TRUST_BADGES.map(({ icon, text }) => (

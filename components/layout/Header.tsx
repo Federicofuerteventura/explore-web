@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation'
 const NAV_LINKS = [
   { href: '/experiences/paddle-excursion',       label: 'Paddle Excursion'      },
   { href: '/experiences/west-sunset-experience', label: 'West Sunset Experience' },
+  { href: '/guides',                             label: 'Blog'                  },
   { href: '/about',                              label: 'About'                 },
   { href: '/contact',                            label: 'Contact'               },
 ] as const
